@@ -1,0 +1,14 @@
+.main-view.row .col{
+    padding: 0;
+}
+.main-view .card .card-content{
+    padding: 10px;
+}
+.main-view .col .row{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+.agenda-card{
+    min-height: 660px;
+}

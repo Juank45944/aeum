@@ -1,0 +1,73 @@
+<!-- <ul id="slide-out" class="sidenav">
+
+  <li *ngFor="let title of titles" class="no-padding">
+    <ul *ngIf="title.contenido != null" class="collapsible collapsible-accordion">
+      <li>
+        <a class="collapsible-header">
+          <span *ngIf="title.numero" class="sidenav-text">{{title.numero}} </span>
+          <span class="sidenav-text">{{title.nombre}}</span>
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li *ngFor="let sub of title.contenido">
+              <a href="#!">
+                <span class="sidenav-text" *ngIf="sub.numero != null">{{sub.numero}}</span>
+                <span class="sidenav-text">{{sub.nombre}}</span>
+                <i class="material-icons">{{sub.icon}}</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <a *ngIf="title.contenido == null">
+      <span class="sidenav-text" *ngIf="title.numero != null">{{title.numero}}</span>
+      <span class="sidenav-text">
+        {{title.nombre}}
+      </span>
+    </a>
+  </li>
+</ul> -->
+
+<ul id="slide-out" class="sidenav">
+  <li>
+    <div class="user-view">
+      <div class="background">
+        <img src="http://placeimg.com/300/176/any">
+      </div>
+      <a href="#user">
+        <img class="circle" src="https://www.fillmurray.com/64/64">
+      </a>
+      <a href="#name">
+        <span class="white-text name">Autoevaluación 2017</span>
+      </a>
+      <a href="#email">
+        <span class="white-text email">Menú principal</span>
+      </a>
+    </div>
+  </li>
+
+
+  <ul class="collapsible scrolling-div">
+    <li *ngFor="let title of titles">
+      <div class="collapsible-header">
+        <a class="black-text">
+          <span class="teal-text text-darken-1" *ngIf="title.numero != null">{{title.numero}}</span>
+          {{title.nombre}}
+        </a>
+      </div>
+      <div class="collapsible-body">
+        <ul *ngIf="title.contenido != null">
+          <li *ngFor="let sub of title.contenido">
+            <a>
+              <span class="teal-text text-darken-1" *ngIf="title.numero != null">{{sub.numero}}</span>
+              {{sub.nombre}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</ul>
